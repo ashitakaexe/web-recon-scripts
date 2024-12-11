@@ -1,50 +1,57 @@
-web-recon-scripts
 
-Description:web-recon-scripts is a collection of automation scripts for web application reconnaissance and penetration testing. It simplifies tasks like directory enumeration, subdomain discovery, and vulnerability scanning. Built for security professionals and bug bounty hunters, it streamlines recon workflows while supporting customization for diverse security assessments.
+# web-recon-scripts
 
-Features:
+**web-recon-scripts** is a collection of automation scripts designed to streamline web application reconnaissance and penetration testing tasks. These scripts help simplify directory enumeration, subdomain discovery, and vulnerability scanning for security professionals and bug bounty hunters.
 
-Automated directory and file enumeration
+## Features
 
-Subdomain and DNS reconnaissance
+- Automated directory and file enumeration
+- Subdomain discovery and DNS recon
+- SSL/TLS security checks
+- Customizable for diverse use cases
+- Designed for efficiency in web reconnaissance workflows
 
-SSL/TLS security checks
+## Requirements
 
-Vulnerability detection and reporting
+- [Feroxbuster](https://github.com/epi052/feroxbuster)
+- Bash shell (compatible with most Unix-like systems)
 
-Easy customization and integration
-
-Installation:
+## Installation
 
 Clone the repository:
 
-git clone https://github.com/yourusername/web-recon-scripts.git
-
-Navigate to the directory:
-
+```bash
+git clone https://github.com/your-username/web-recon-scripts.git
 cd web-recon-scripts
+```
 
-Make scripts executable:
+Ensure the required tools (like `feroxbuster`) are installed and in your system's PATH.
 
-chmod +x *.sh
+## Usage
 
-Usage:
+Example usage of a script in this repository:
 
-Run any script with the appropriate arguments. Example for running a directory enumeration script:
+### `run_feroxbuster.sh`
 
-./run_feroxbuster.sh
+This script automates `feroxbuster` for multiple URLs.
 
-Contributing:
+1. Place your target URLs in a file named `urls.txt` (one URL per line).
+2. Run the script:
 
-Contributions are welcome! Please fork the repository, make changes, and submit a pull request.
+```bash
+bash run_feroxbuster.sh
+```
 
-License:
+3. Results will be saved as individual files, one per URL.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Disclaimer:
+## Legal Disclaimer
 
 These scripts are intended for legal and authorized security assessments only. Unauthorized use against systems without explicit permission is strictly prohibited.
 
-Happy Hacking!
+## Contributing
 
+Contributions are welcome! Please fork this repository, create a new branch for your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
